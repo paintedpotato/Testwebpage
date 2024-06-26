@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function addMessageToChat(sender, message) {
         const messageElem = document.createElement('div');
-        messageElem.textContent = `${sender}: ${message}`;
+        messageElem.textContent = '${sender}: ${message}';
         chatbotMessages.appendChild(messageElem);
         chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
     }
@@ -41,10 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer YOUR_OPENAI_API_KEY` // Replace with your actual OpenAI API key
+                'Authorization': 'Bearer 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' // Replace with your actual OpenAI API key
             },
             body: JSON.stringify({
-                prompt: `As a pastoral service provider, respond to the following query: ${message}`,
+                prompt: 'As a pastoral service provider, respond to the following query: ${message}',
                 max_tokens: 150
             })
         });
